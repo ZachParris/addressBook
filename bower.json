@@ -1,0 +1,17 @@
+{
+  "name": "addressBook",
+  "homepage": "https://github.com/ZachParris/addressBook",
+  "authors": [
+    "ZachParris <zacharyjparris@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
