@@ -1,0 +1,12 @@
+body {
+  background-color: black;
+  font-family: impact; }
+
+h1 {
+  text-align: center; }
+
+.main-container {
+  border: 2px solid black; }
+
+div {
+  background-color: tomato; }
