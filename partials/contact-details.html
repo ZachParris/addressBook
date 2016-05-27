@@ -1,1 +1,6 @@
-<h1>Contact Details</h1>
+<h1>{{selectedItem.name}}</h1>
+
+<button class="btn btn-info"><a ng-href="#/items/{{selectedItem.id}}/edit">Edit</a></button>
+<h2>Email: {{selectedItem.email}}</h2>
+<h2>Phone: {{selectedItem.phone}}</h2>
+<h2>Completed ?: {{selectedItem.isCompleted}}</h2>
