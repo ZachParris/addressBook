@@ -12,10 +12,10 @@ app.config(function($routeProvider){
 	  	controller: "ItemNewCtrl"
 	  }).
 	  when("/items/:itemId/edit", {
-	  	templateUrl: "partials/item-new.html",
+	  	templateUrl: "partials/contact-new.html",
 	  	controller: "ItemEditCtrl"
 	  }).
-	  when("/items/details", {
+	  when("/items/:itemId", {
 	  	templateUrl: "partials/contact-details.html",
 	  	controller: "ItemViewCtrl"
 	  }).

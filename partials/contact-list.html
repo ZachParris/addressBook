@@ -22,13 +22,13 @@
         </div>
     </div>
     <div ng-repeat="thingy in items | filter: searchText">
-        <div class="panel panel-default" ng-hide="thingy.isCompleted ">
+        <div class="panel panel-default" ng-hide="thingy.favorites ">
         <div class="panel-body">
             <div class="row">
 
                 
             </div>
-            <div class="col-xs-1"><input type="checkbox" ng-model="thingy.isCompleted" ng-change="inputChange(thingy)"/></div>
+            <div class="col-xs-1"><input type="checkbox" ng-model="thingy.favorites" ng-change="inputChange(thingy)"/></div>
             <div class="col-xs-4"><a ng-href="#/items/{{thingy.id}}">{{thingy.name}}</a></div>
             <div class="col-xs-3">{{thingy.phone}}</div>
             <div class="col-xs-3">{{thingy.email}}</div>
@@ -48,10 +48,10 @@
             <!-- <div class="col-xs-1"></div> -->
         </div>
     </div>
-    <div ng-repeat="thingy in items | filter: {isCompleted: true}">
+    <div ng-repeat="thingy in items | filter: {favorites: true}">
         <div class="panel panel-default">
         <div class="panel-body">
-            <div class="col-xs-1"><input type="checkbox" ng-model="thingy.isCompleted" ng-change="inputChange(thingy)"/></div>
+            <div class="col-xs-1"><input type="checkbox" ng-model="thingy.favorites" ng-change="inputChange(thingy)"/></div>
             <div class="col-xs-4"><a ng-href="#/items/{{thingy.id}}">{{thingy.name}}</a></div>
             <div class="col-xs-3">{{thingy.phone}}</div>
             <div class="col-xs-3">{{thingy.email}}</div>

@@ -14,4 +14,11 @@ app.controller("ItemListCtrl", function($scope, $location, itemStorage){
             });
         });
     };
+
+    $scope.inputChange = function(item){
+        itemStorage.updateFavoritesStatus(item)
+            .then(function(response){
+                console.log(response);
+            });
+    };
 });

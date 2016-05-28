@@ -31,12 +31,12 @@ app.factory("itemStorage", function($q, $http, firebaseURL){
 	var postNewItem = function(newItem){
         return $q(function(resolve, reject) {
             $http.post(
-                firebaseURL + "contacts.json",
+                firebaseURL + "items.json",
                 JSON.stringify({
                     name: newItem.name,
                     phone: newItem.phone,
                     email: newItem.email,
-                    isCompleted: newItem.isCompleted
+                    favorites: newItem.favorites
                 })
             )
             .success(
@@ -67,7 +67,7 @@ app.factory("itemStorage", function($q, $http, firebaseURL){
                     name: newItem.name,
                     email: newItem.email,
                     phone: newItem.phone,
-                    isCompleted: newItem.isCompleted
+                    favorites: newItem.favorites
                 })
             )
             .success(
@@ -78,7 +78,7 @@ app.factory("itemStorage", function($q, $http, firebaseURL){
         });
     };
 
-     var updateCompletedStatus = function(newItem){
+     var updateFavoritesStatus = function(newItem){
         return $q(function(resolve, reject) {
             $http.put(
                 firebaseURL + "items/" + newItem.id + ".json",
@@ -86,7 +86,7 @@ app.factory("itemStorage", function($q, $http, firebaseURL){
                     name: newItem.name,
                     email: newItem.email,
                     phone: newItem.phone,
-                    isCompleted: newItem.isCompleted
+                    favorites: newItem.favorites
                 })
             )
             .success(
@@ -97,7 +97,7 @@ app.factory("itemStorage", function($q, $http, firebaseURL){
         });
     };
 
-	return {updateCompletedStatus:updateCompletedStatus, updateItem:updateItem, getSingleItem:getSingleItem, getItemList:getItemList, deleteItem:deleteItem, postNewItem:postNewItem};
+	return {updateFavoritesStatus:updateFavoritesStatus, updateItem:updateItem, getSingleItem:getSingleItem, getItemList:getItemList, deleteItem:deleteItem, postNewItem:postNewItem};
 
 });
 	

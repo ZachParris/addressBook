@@ -1,15 +1,15 @@
 app.controller("ItemNewCtrl", function($scope, $location, itemStorage){
-	$scope.title = "New Item";
+	$scope.title = "New Guy";
 	$scope.submitButtonText = "Add New Item";
-    $scope.newTask = {
+    $scope.newContact = {
         name: "",
         phone:"",
         email: "",
-        isCompleted: true
+        favorites: false
     };
       
-    $scope.addNewItem = function(){
-        itemStorage.postNewItem($scope.newTask)
+    $scope.addNewContact = function(){
+        itemStorage.postNewItem($scope.newContact)
             .then(function successCallback(response) {
                 console.log(response);
                 $location.url("/items/list");
