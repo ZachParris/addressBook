@@ -1,19 +1,28 @@
 $body-color: black;
 $container-color: tomato;
+$nav-color: lightgrey;
 
 body {
 	background-color: $body-color;
 	font-family: impact;
 }
-
 h1 {
+	text-align: center;
+}
+
+button {
 	text-align: center;
 }
 
 .main-container {
 	border: 2px solid black;
-}
-
-.navi {
 	background-color: $container-color;
 }
+
+nav {
+	background-color: $nav-color;
+}
+
+// #titleBar {
+// 	text-align: center;
+// }

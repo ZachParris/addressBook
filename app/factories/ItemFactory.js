@@ -1,5 +1,6 @@
 "use strict"; 
 app.factory("itemStorage", function($q, $http, firebaseURL){
+
 	var getItemList = function(){
 		var items = [];
 		return $q(function(resolve, reject){
@@ -35,6 +36,7 @@ app.factory("itemStorage", function($q, $http, firebaseURL){
                     name: newItem.name,
                     phone: newItem.phone,
                     email: newItem.email,
+                    isCompleted: newItem.isCompleted
                 })
             )
             .success(
@@ -65,7 +67,7 @@ app.factory("itemStorage", function($q, $http, firebaseURL){
                     name: newItem.name,
                     email: newItem.email,
                     phone: newItem.phone,
-                    isCompleted: newItem.isCompleted,
+                    isCompleted: newItem.isCompleted
                 })
             )
             .success(
@@ -84,7 +86,7 @@ app.factory("itemStorage", function($q, $http, firebaseURL){
                     name: newItem.name,
                     email: newItem.email,
                     phone: newItem.phone,
-                    isCompleted: newItem.isCompleted,
+                    isCompleted: newItem.isCompleted
                 })
             )
             .success(

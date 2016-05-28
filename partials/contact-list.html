@@ -10,39 +10,41 @@
         </div>
     </div>
 
-    <h3>In Progress</h3>
+    <h3>Contacts</h3>
 
-    <div class="panel panel-default title-bar">
+    <div class="panel panel-default title-bar" id="titleBar">
         <div class="panel-body">
             <div class="col-xs-1"></div>
-            <div class="col-xs-2">Guy</div>
-            <div class="col-xs-3">Email</div>
+            <div class="col-xs-4">Guy</div>
             <div class="col-xs-3">Phone</div>
+            <div class="col-xs-3">Email</div>
             <!-- <div class="col-xs-1"></div> -->
         </div>
     </div>
     <div ng-repeat="thingy in items | filter: searchText">
         <div class="panel panel-default" ng-hide="thingy.isCompleted ">
         <div class="panel-body">
-            <div class="col-xs-1"><input type="checkbox" ng-model="thingy.isCompleted" ng-change="inputChange(thingy)"/></div>
-            <div class="col-xs-5"><a ng-href="#/items/{{thingy.id}}">{{thingy.name}}</a></div>
-            <div class="col-xs-1">{{thingy.phone}}</div>
-            <div class="col-xs-2">{{thingy.email}}</div>
-            <div class="col-xs-1">
-                <button class="btn btn-danger" ng-click="itemDelete(thingy.id)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            <div class="row">
+
+                
             </div>
+            <div class="col-xs-1"><input type="checkbox" ng-model="thingy.isCompleted" ng-change="inputChange(thingy)"/></div>
+            <div class="col-xs-4"><a ng-href="#/items/{{thingy.id}}">{{thingy.name}}</a></div>
+            <div class="col-xs-3">{{thingy.phone}}</div>
+            <div class="col-xs-3">{{thingy.email}}</div>
+                <button class="col-xs-1 pull-right btn btn-danger" ng-click="itemDelete(thingy.id)"><i class="fa fa-trash" aria-hidden="true"></i></button>
         </div>
         </div>
     </div>
 </div>
 
-  <h3>Completed</h3>
+  <h3>Favorites</h3>
     <div class="panel panel-default">
         <div class="panel-body">
             <div class="col-xs-1"></div>
-            <div class="col-xs-5">Name</div>
-            <div class="col-xs-2">Phone</div>
-            <div class="col-xs-2">Email</div>
+            <div class="col-xs-4">Name</div>
+            <div class="col-xs-3">Phone</div>
+            <div class="col-xs-3">Email</div>
             <!-- <div class="col-xs-1"></div> -->
         </div>
     </div>
@@ -50,9 +52,9 @@
         <div class="panel panel-default">
         <div class="panel-body">
             <div class="col-xs-1"><input type="checkbox" ng-model="thingy.isCompleted" ng-change="inputChange(thingy)"/></div>
-            <div class="col-xs-7"><a ng-href="#/items/{{thingy.id}}">{{thingy.name}}</a></div>
-            <div class="col-xs-1">{{thingy.phone}}</div>
-            <div class="col-xs-2">{{thingy.email}}</div>
+            <div class="col-xs-4"><a ng-href="#/items/{{thingy.id}}">{{thingy.name}}</a></div>
+            <div class="col-xs-3">{{thingy.phone}}</div>
+            <div class="col-xs-3">{{thingy.email}}</div>
             <div class="col-xs-1"></div>
         </div>
         </div>
