@@ -14,3 +14,11 @@ button {
 
 nav {
   background-color: lightgrey; }
+
+section {
+  text-align: center;
+  position: relative;
+  padding: 10px; }
+
+input {
+  margin: 10px; }

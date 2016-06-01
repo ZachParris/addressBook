@@ -1,5 +1,5 @@
-"use strict"; 
-app.factory("itemStorage", function($q, $http, firebaseURL){
+// "use strict"; 
+app.factory("itemStorage", function($q, $http, firebaseURL, AuthFactory){
 
 	var getItemList = function(){
 		var items = [];
